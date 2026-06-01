@@ -44,19 +44,10 @@ body{
 /* ================= HERO ================= */
 
 .hero{
-    background:
-    linear-gradient(
-        135deg,
-        #071f4f 0%,
-        #0b3d91 45%,
-        #0a2d6d 100%
-    );
-
+    background:linear-gradient(135deg,#071f4f 0%,#0b3d91 45%,#0a2d6d 100%);
     position:relative;
     overflow:hidden;
-
-    padding:20px 0 55px;
-
+    padding:15px 0 30px;
     border-bottom:4px solid #ff7b00;
 }
 
@@ -215,6 +206,37 @@ body{
     color:var(--primary);
     font-size:2rem;
     margin-bottom:35px;
+}
+
+
+/* ================= WELCOME ================= */
+
+.welcome-section{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.welcome-title{
+    color:var(--primary);
+    font-size:2rem;
+    margin-bottom:18px;
+    font-weight:700;
+}
+
+.welcome-text{
+    max-width:850px;
+    margin:0 auto;
+    line-height:1.9;
+    color:#475569;
+    font-size:1.08rem;
+}
+
+.welcome-verse{
+    margin-top:20px;
+    color:var(--secondary);
+    font-style:italic;
+    font-size:1.05rem;
+    font-weight:500;
 }
 
 /* ================= SERVICES ================= */
@@ -384,26 +406,32 @@ footer{
     <p>Iglesia Pentecostal Unida de Colombia</p>
 </div>
 
-        <div class="hero-center">
-
-            <p>
-                Somos una iglesia comprometida con la enseñanza de la Palabra,
-                la formación de vidas transformadas por Cristo y el crecimiento
-                espiritual de cada familia.
-            </p>
-
-            <div class="hero-verse">
-                "Venid a mí todos los que estáis trabajados y cargados,
-                y yo os haré descansar." — Mateo 11:28
-            </div>
-
-        </div>
+   
 
     </div>
 
 </section>
 
 <section class="main-card">
+
+    <div class="welcome-section">
+
+    <h2 class="welcome-title">
+        Bienvenidos a IPUC Bochica Sur
+    </h2>
+
+    <p class="welcome-text">
+        Somos una iglesia comprometida con la enseñanza de la Palabra,
+        la formación de vidas transformadas por Cristo y el crecimiento
+        espiritual de cada familia.
+    </p>
+
+    <div class="welcome-verse">
+        "Venid a mí todos los que estáis trabajados y cargados,
+        y yo os haré descansar." — Mateo 11:28
+    </div>
+
+</div>
 
     <h2 class="section-title">
         Nuestros Servicios

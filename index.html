@@ -47,7 +47,7 @@ body{
     background:linear-gradient(135deg,#071f4f 0%,#0b3d91 45%,#0a2d6d 100%);
     position:relative;
     overflow:hidden;
-    padding:15px 0 30px;
+    padding:10px 0 20px;
     border-bottom:4px solid #ff7b00;
 }
 
@@ -94,18 +94,26 @@ body{
 .top-bar{
     display:flex;
     justify-content:space-between;
-    align-items:flex-start;
-    margin-bottom:10px;
+    align-items:center;
+    margin-bottom:-8px;
+    position:relative;
+    z-index:2;
+}
+
+.logo-left,
+.logo-right-container{
+    display:flex;
+    align-items:center;
 }
 
 .logo-left img{
-    height:95px;
+    height:80px;
     width:auto;
     object-fit:contain;
 }
 
 .logo-right-container img{
-    height:55px;
+    height:80px;
     width:auto;
     object-fit:contain;
 }
@@ -113,7 +121,7 @@ body{
 .center-brand{
     text-align:center;
     color:white;
-    margin-top:-25px;
+    margin-top:-55px;
 }
 
 .center-brand h1{
@@ -385,30 +393,31 @@ footer{
 </head>
 <body>
 
-<section class="hero" style="background:#0b3d91; height:150px; border-bottom:4px solid #ff7b00; border-radius:12px; position:relative;">
-    <div class="hero-content" style="display:flex; align-items:center; justify-content:space-between; height:100%; width:min(1400px,95%); margin:auto;">
+<section class="hero">
 
-        <!-- Logo izquierdo -->
-        <div class="logo-left" style="flex:0 0 auto; display:flex; align-items:center; height:100%;">
-            <img src="logo1.png" alt="IPUC" style="height:100%; width:auto; object-fit:contain;">
-        </div>
+    <div class="hero-content">
 
-        <!-- Texto centrado -->
-        <div class="center-brand" style="flex:1; text-align:center; display:flex; flex-direction:column; justify-content:center; height:100%; margin:0 20px;">
-            <h1 style="font-size:2.2rem; font-weight:800; color:white; margin:0; text-shadow:0 4px 20px rgba(0,0,0,0.35); line-height:1;">
-                IPUC Bochica Sur
-            </h1>
-            <p style="font-size:1rem; color:#dbeafe; letter-spacing:1px; text-transform:uppercase; margin:0; opacity:0.95;">
-                Iglesia Pentecostal Unida de Colombia
-            </p>
-        </div>
+<div class="top-bar">
 
-        <!-- Logo derecho grande -->
-        <div class="logo-right-container" style="flex:0 0 auto; display:flex; align-items:center; height:100%;">
-            <img src="logo2.png" alt="UNÁNIMES" style="height:100%; width:auto; object-fit:contain;">
-        </div>
+    <div class="logo-left">
+        <img src="logo1.png" alt="IPUC">
+    </div>
+
+    <div class="logo-right-container">
+        <img src="logo2.png" alt="UNÁNIMES">
+    </div>
+
+</div>
+
+<div class="center-brand">
+    <h1>IPUC Bochica Sur</h1>
+    <p>Iglesia Pentecostal Unida de Colombia</p>
+</div>
+
+   
 
     </div>
+
 </section>
 
 <section class="main-card">

@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -30,6 +30,11 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     box-sizing:border-box;
 }
 
+html,
+body{
+    overflow-x:hidden;
+}
+
 body{
     font-family:'Poppins',sans-serif;
     background:var(--bg);
@@ -45,11 +50,9 @@ body{
         #154da8
     );
 
-    min-height:420px;
+    min-height:280px;
 
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
+    padding:20px 0 90px;
 
     position:relative;
     overflow:hidden;
@@ -58,47 +61,67 @@ body{
 .hero::before{
     content:'';
     position:absolute;
-    width:500px;
-    height:500px;
+
+    width:450px;
+    height:450px;
+
     border-radius:50%;
-    background:rgba(255,255,255,.05);
-    top:-200px;
-    right:-150px;
+
+    background:rgba(255,255,255,.04);
+
+    top:-220px;
+    right:-120px;
 }
 
 .hero::after{
     content:'';
     position:absolute;
-    width:350px;
-    height:350px;
+
+    width:280px;
+    height:280px;
+
     border-radius:50%;
-    background:rgba(255,255,255,.04);
-    bottom:-150px;
-    left:-100px;
+
+    background:rgba(255,255,255,.03);
+
+    bottom:-140px;
+    left:-120px;
 }
 
 .hero-content{
-    width:min(1200px,90%);
+    width:min(1200px,92%);
     margin:auto;
     position:relative;
     z-index:2;
 }
 
+/* ================= TOP BAR ================= */
+
 .top-bar{
     display:flex;
     align-items:center;
     justify-content:space-between;
-    margin-bottom:40px;
+    margin-bottom:20px;
 }
 
 .logo{
-    height:110px;
+    height:70px;
+    width:auto;
     object-fit:contain;
 }
 
 .logo-right{
-    height:100px;
+    height:55px;
 }
+
+.church-name{
+    color:white;
+    font-size:1.1rem;
+    font-weight:600;
+    opacity:.9;
+}
+
+/* ================= HERO CENTER ================= */
 
 .hero-center{
     text-align:center;
@@ -106,38 +129,41 @@ body{
 }
 
 .hero-center h1{
-    font-size:3rem;
-    font-weight:700;
-    margin-bottom:15px;
+    font-size:clamp(2.2rem,4vw,4rem);
+    font-weight:800;
+    margin-bottom:12px;
 }
 
 .hero-center p{
-    max-width:800px;
+    max-width:850px;
     margin:auto;
-    font-size:1.1rem;
+    font-size:1rem;
+    line-height:1.7;
     opacity:.95;
-    line-height:1.8;
 }
 
 .hero-verse{
-    margin-top:25px;
+    margin-top:18px;
     color:#ffd8a8;
     font-style:italic;
+    font-size:.95rem;
 }
 
 /* ================= CARD ================= */
 
 .main-card{
     width:min(1100px,92%);
-    margin:-80px auto 50px;
+
+    margin:-50px auto 40px;
 
     background:white;
+
     border-radius:24px;
 
-    padding:50px;
+    padding:45px;
 
     box-shadow:
-    0 20px 50px rgba(0,0,0,.12);
+    0 20px 50px rgba(0,0,0,.10);
 
     position:relative;
     z-index:10;
@@ -147,7 +173,7 @@ body{
     text-align:center;
     color:var(--primary);
     font-size:2rem;
-    margin-bottom:40px;
+    margin-bottom:35px;
 }
 
 /* ================= SERVICES ================= */
@@ -162,9 +188,11 @@ body{
 
 .service-card{
     background:#f8faff;
-    border:1px solid #e8eef8;
+
+    border:1px solid #e7eef9;
 
     border-radius:18px;
+
     padding:25px;
 
     transition:.3s;
@@ -192,32 +220,33 @@ body{
 /* ================= ADDRESS ================= */
 
 .location{
-    margin-top:50px;
+    margin-top:45px;
     text-align:center;
 }
 
 .location h2{
     color:var(--primary);
-    margin-bottom:15px;
+    margin-bottom:12px;
 }
 
 .location p{
-    font-size:1.1rem;
+    font-size:1.05rem;
     font-weight:500;
 }
 
 /* ================= SOCIAL ================= */
 
 .social{
-    margin-top:50px;
+    margin-top:40px;
+
     display:flex;
     justify-content:center;
-    gap:18px;
+    gap:16px;
 }
 
 .social a{
-    width:58px;
-    height:58px;
+    width:55px;
+    height:55px;
 
     border-radius:50%;
 
@@ -230,22 +259,23 @@ body{
     background:var(--primary);
     color:white;
 
-    font-size:1.3rem;
+    font-size:1.2rem;
 
     transition:.3s;
 }
 
 .social a:hover{
     background:var(--secondary);
-    transform:translateY(-5px);
+    transform:translateY(-4px);
 }
 
 /* ================= FOOTER ================= */
 
 footer{
     text-align:center;
-    padding:30px;
+    padding:25px;
     color:#64748b;
+    font-size:.95rem;
 }
 
 /* ================= MOBILE ================= */
@@ -254,20 +284,37 @@ footer{
 
     .top-bar{
         flex-direction:column;
-        gap:20px;
+        gap:12px;
+        text-align:center;
+    }
+
+    .church-name{
+        order:2;
+    }
+
+    .logo-right{
+        height:50px;
+    }
+
+    .hero{
+        padding:20px 0 70px;
     }
 
     .hero-center h1{
-        font-size:2.1rem;
+        font-size:2rem;
+    }
+
+    .hero-center p{
+        font-size:.95rem;
     }
 
     .main-card{
         padding:30px 20px;
-        margin-top:-60px;
+        margin-top:-40px;
     }
 
     .logo{
-        height:85px;
+        height:65px;
     }
 
 }
@@ -282,15 +329,19 @@ footer{
 
         <div class="top-bar">
 
-            <img src="logo1.png" class="logo">
+            <img src="logo1.png" class="logo" alt="IPUC">
 
-            <img src="logo2.png" class="logo logo-right">
+            <div class="church-name">
+                IPUC Bochica Sur
+            </div>
+
+            <img src="logo2.png" class="logo logo-right" alt="UNÁNIMES">
 
         </div>
 
         <div class="hero-center">
 
-            <h1>IPUC Bochica Sur</h1>
+            <h1>Bienvenidos</h1>
 
             <p>
                 Somos una iglesia comprometida con la enseñanza de la Palabra,

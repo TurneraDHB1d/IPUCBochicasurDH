@@ -42,41 +42,104 @@ body{
 }
 
 /* ================= HERO ================= */
-.hero {
-    background: #0b3d91;
-    padding: 20px 40px;
-    border-bottom: 4px solid #ff7b00;
+
+.hero{
+    background:linear-gradient(135deg,#071f4f 0%,#0b3d91 45%,#0a2d6d 100%);
+    position:relative;
+    overflow:hidden;
+    padding:15px 0 30px;
+    border-bottom:4px solid #ff7b00;
 }
 
-.hero-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    width: 100%;
+.hero::before{
+    content:'';
+    position:absolute;
+
+    inset:0;
+
+    background:
+    radial-gradient(
+        circle at top right,
+        rgba(255,123,0,.12),
+        transparent 35%
+    );
+
+    pointer-events:none;
 }
 
-.logo-left img { height: 100px; width: auto; }
-.logo-right-container img { height: 80px; width: auto; } /* Aumenté el tamaño aquí */
+.hero::after{
+    content:'';
 
-.center-brand {
-    text-align: center;
-    color: white;
-    flex-grow: 1; /* Permite que el texto ocupe el espacio central */
+    position:absolute;
+
+    left:0;
+    right:0;
+    bottom:0;
+
+    height:1px;
+
+    background:
+    rgba(255,255,255,.15);
 }
 
-.center-brand h1 {
-    font-size: 2.5rem;
-    font-weight: 800;
-    margin-bottom: 5px;
+.hero-content{
+    width:min(1400px,95%);
+    margin:auto;
+    position:relative;
+    z-index:2;
+}
+
+/* ================= HEADER PRO ================= */
+
+.top-bar{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    margin-bottom:10px;
+}
+
+.logo-left img{
+    height:95px;
+    width:auto;
+    object-fit:contain;
+}
+
+.logo-right-container img{
+    height:55px;
+    width:auto;
+    object-fit:contain;
+}
+
+.center-brand{
+    text-align:center;
+    color:white;
+    margin-top:-25px;
+}
+
+.center-brand h1{
+    font-size:clamp(3.5rem,6vw,6rem);
+
+    line-height:1;
+
+    font-weight:800;
+
+    margin-bottom:12px;
+
+    color:white;
+
+    text-shadow:
+        0 4px 20px rgba(0,0,0,.35);
 }
 
 .center-brand p{
-    font-size:clamp(0.8rem, 2vw, 1rem);
+    font-size:1.15rem;
+
     opacity:.95;
+
     color:#dbeafe;
-    letter-spacing:1px;
+
+    letter-spacing:2px;
+
     text-transform:uppercase;
 }
 
@@ -95,11 +158,16 @@ body{
 
 .hero-center::before{
     content:'';
+
     display:block;
+
     width:90px;
     height:4px;
+
     margin:0 auto 20px;
+
     background:#ff7b00;
+
     border-radius:10px;
 }
 .hero-center p{
@@ -110,9 +178,13 @@ body{
 
 .hero-verse{
     margin-top:18px;
+
     color:#ffb45c;
+
     font-style:italic;
+
     font-size:1rem;
+
     font-weight:500;
 }
 
@@ -273,9 +345,15 @@ footer{
 
 @media(max-width:768px){
 
-    .hero-content {
-        flex-direction: column;
-        gap: 15px;
+    .top-bar{
+        grid-template-columns:1fr;
+        text-align:center;
+        gap:15px;
+    }
+
+    .logo-left,
+    .logo-right-container{
+        justify-content:center;
     }
 
     .logo-left img{
@@ -283,15 +361,19 @@ footer{
     }
 
     .logo-right-container img{
-        height:45px;
+        height:55px;
     }
 
     .center-brand h1{
-        font-size:1.8rem;
+        font-size:2.2rem;
     }
 
     .center-brand p{
-        font-size:.8rem;
+        font-size:.9rem;
+    }
+
+    .hero{
+        padding:20px 0 45px;
     }
 
     .main-card{
@@ -303,20 +385,29 @@ footer{
 </head>
 <body>
 
-<section class="hero">
-    <div class="hero-content">
+<section class="hero" style="background:linear-gradient(135deg,#071f4f 0%,#0b3d91 45%,#0a2d6d 100%); padding:20px 0; border-bottom:4px solid #ff7b00; position:relative; border-radius:12px;">
+    <div class="hero-content" style="display:flex; align-items:center; justify-content:space-between; width:min(1400px,95%); margin:auto;">
+
+        <!-- Logo izquierdo -->
         <div class="logo-left">
-            <img src="logo1.png" alt="IPUC">
+            <img src="logo1.png" alt="IPUC" style="height:100px; width:auto; object-fit:contain;">
         </div>
 
-        <div class="center-brand">
-            <h1>IPUC Bochica Sur</h1>
-            <p>IGLESIA PENTECOSTAL UNIDA DE COLOMBIA</p>
+        <!-- Título centrado -->
+        <div class="center-brand" style="flex:1; text-align:center; margin:0 20px;">
+            <h1 style="font-size:clamp(3rem,5vw,5.5rem); font-weight:800; color:white; margin-bottom:8px; text-shadow:0 4px 20px rgba(0,0,0,0.35);">
+                IPUC Bochica Sur
+            </h1>
+            <p style="font-size:1.1rem; color:#dbeafe; letter-spacing:2px; text-transform:uppercase; margin:0; opacity:0.95;">
+                Iglesia Pentecostal Unida de Colombia
+            </p>
         </div>
 
+        <!-- Logo derecho -->
         <div class="logo-right-container">
-            <img src="logo2.png" alt="UNIMES">
+            <img src="logo2.png" alt="UNÁNIMES" style="height:100px; width:auto; object-fit:contain;">
         </div>
+
     </div>
 </section>
 
@@ -410,7 +501,7 @@ footer{
 </section>
 
 <footer>
-    © 2025 IPUC Bochica Sur · Todos los derechos reservados
+    © 2026 IPUC Bochica Sur · Todos los derechos reservados
 </footer>
 
 </body>

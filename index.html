@@ -110,19 +110,25 @@ body{
 /* ================= HEADER PRO ================= */
 
 .top-bar{
-    display:grid;
-    grid-template-columns:320px 1fr 320px;
-    align-items:center;
-    gap:0;
-    margin-bottom:0;
+    position:relative;
+    height:130px;
 }
 
 .logo-left,
 .logo-right-container{
-    display:flex;
-    align-items:center;
-    height:100%;
+    position:absolute;
+    top:10px;
 }
+
+
+.logo-left{
+    left:25px;
+}
+
+.logo-right-container{
+    right:25px;
+}
+
 
 .logo-left{
     justify-content:flex-start;
@@ -149,7 +155,7 @@ body{
 .center-brand{
     text-align:center;
     color:white;
-    margin:0;
+    margin-top:-20px;
 }
 .center-brand h1{
     font-size:clamp(3.5rem,6vw,6rem);
@@ -417,9 +423,7 @@ footer{
     }
 }
 
-.logo-right-container img{
-    max-width:260px;
-}
+
 </style>
 </head>
 <body>
@@ -434,15 +438,15 @@ footer{
         <img src="logo1.png" alt="IPUC">
     </div>
 
-    <div class="center-brand">
-        <h1>IPUC Bochica Sur</h1>
-        <p>Iglesia Pentecostal Unida de Colombia</p>
-    </div>
-
     <div class="logo-right-container">
         <img src="logo2.png" alt="UNÁNIMES">
     </div>
 
+</div>
+
+<div class="center-brand">
+    <h1>IPUC Bochica Sur</h1>
+    <p>Iglesia Pentecostal Unida de Colombia</p>
 </div>
 
    

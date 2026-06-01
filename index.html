@@ -111,9 +111,9 @@ body{
 
 .top-bar{
     display:grid;
-    grid-template-columns:220px 1fr 220px;
-    align-items:start;
-    gap:20px;
+    grid-template-columns:320px 1fr 320px;
+    align-items:center;
+    gap:0;
     margin-bottom:0;
 }
 
@@ -121,17 +121,27 @@ body{
 .logo-right-container{
     display:flex;
     align-items:center;
-    justify-content:center;
+    height:100%;
+}
+
+.logo-left{
+    justify-content:flex-start;
+    padding-left:15px;
+}
+
+.logo-right-container{
+    justify-content:flex-end;
+    padding-right:15px;
 }
 
 .logo-left img{
-    height:120px;
+    height:135px;
     width:auto;
     object-fit:contain;
 }
 
 .logo-right-container img{
-    height:95px;
+    height:110px;
     width:auto;
     object-fit:contain;
 }

@@ -101,8 +101,7 @@ body{
     transform:translateX(50%);
 }
 .hero-content{
-    width:min(1400px,95%);
-    margin:auto;
+    width:100%;
     position:relative;
     z-index:2;
 }
@@ -110,8 +109,9 @@ body{
 /* ================= HEADER PRO ================= */
 
 .top-bar{
-    position:relative;
-    height:130px;
+    position:absolute;
+    inset:0;
+    pointer-events:none;
 }
 
 .logo-left,
@@ -122,11 +122,15 @@ body{
 
 
 .logo-left{
-    left:25px;
+    position:absolute;
+    left:40px;
+    top:25px;
 }
 
 .logo-right-container{
-    right:25px;
+    position:absolute;
+    right:40px;
+    top:25px;
 }
 
 
@@ -413,9 +417,9 @@ footer{
         font-size:.9rem;
     }
 
-    .hero{
-        padding:20px 0 45px;
-    }
+  .hero{
+    padding:10px 0 10px;
+}
 
     .main-card{
         margin-top:-15px;
@@ -423,7 +427,10 @@ footer{
     }
 }
 
-
+.center-brand{
+    width:min(1100px,90%);
+    margin:auto;
+}
 </style>
 </head>
 <body>

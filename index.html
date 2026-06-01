@@ -22,15 +22,27 @@
 
     header {
       width:100%;
-      background-color:#0b3d91; /* azul encabezado */
+      background-color:#0b3d91; /* azul */
       padding:15px 30px;
       display:flex;
       justify-content:space-between;
       align-items:center;
+      color:white;
+    }
+
+    .header-left {
+      display:flex;
+      align-items:center;
+      gap:15px;
+    }
+
+    .header-left h1 {
+      font-size:1.8rem;
+      color:white;
     }
 
     header img {
-      height:60px;
+      height:50px;
       width:auto;
     }
 
@@ -90,7 +102,7 @@
 
     .services ul li::before {
       content:"•";
-      color:#ff6600; /* acento naranja muy sutil */
+      color:#ff6600; /* acento naranja */
       position:absolute;
       left:0;
     }
@@ -112,7 +124,7 @@
       width:50px;
       height:50px;
       background-color:#0b3d91;
-      color:#fff;
+      color:#fff; /* iconos blancos visibles */
       border-radius:50%;
       display:flex;
       justify-content:center;
@@ -145,13 +157,17 @@
       .services { text-align:center; }
       .services ul li { padding-left:0; }
       .social-buttons { gap:15px; }
+      .header-left h1 { font-size:1.4rem; }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="logo1.png" alt="Logo IPUC 1">
+    <div class="header-left">
+      <h1>IPUC Bochica Sur</h1>
+      <img src="logo1.png" alt="Logo IPUC 1">
+    </div>
     <img src="logo2.png" alt="Logo IPUC 2">
   </header>
 

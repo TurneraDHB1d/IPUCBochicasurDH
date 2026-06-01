@@ -44,32 +44,51 @@ body{
 /* ================= HERO ================= */
 
 .hero{
-    background:linear-gradient(135deg,#0b3d91 0%,#154da8 100%);
+    background:
+    linear-gradient(
+        135deg,
+        #071f4f 0%,
+        #0b3d91 45%,
+        #0a2d6d 100%
+    );
+
     position:relative;
     overflow:hidden;
-    padding:15px 0 45px;
+
+    padding:20px 0 55px;
+
+    border-bottom:4px solid #ff7b00;
 }
 
 .hero::before{
     content:'';
     position:absolute;
-    width:350px;
-    height:350px;
-    border-radius:50%;
-    background:rgba(255,255,255,.04);
-    top:-180px;
-    right:-120px;
+
+    inset:0;
+
+    background:
+    radial-gradient(
+        circle at top right,
+        rgba(255,123,0,.12),
+        transparent 35%
+    );
+
+    pointer-events:none;
 }
 
 .hero::after{
     content:'';
+
     position:absolute;
-    width:220px;
-    height:220px;
-    border-radius:50%;
-    background:rgba(255,255,255,.03);
-    bottom:-120px;
-    left:-120px;
+
+    left:0;
+    right:0;
+    bottom:0;
+
+    height:1px;
+
+    background:
+    rgba(255,255,255,.15);
 }
 
 .hero-content{
@@ -108,17 +127,29 @@ body{
 
 .center-brand h1{
     font-size:clamp(3.5rem,6vw,6rem);
+
     line-height:1;
+
     font-weight:800;
+
     margin-bottom:12px;
-    text-shadow:0 4px 15px rgba(0,0,0,.15);
+
+    color:white;
+
+    text-shadow:
+        0 4px 20px rgba(0,0,0,.35);
 }
 
 .center-brand p{
-    font-size:1.25rem;
-    opacity:.92;
-    font-weight:500;
-    letter-spacing:.5px;
+    font-size:1.15rem;
+
+    opacity:.95;
+
+    color:#dbeafe;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
 }
 
 /* ================= HERO TEXT ================= */
@@ -129,6 +160,25 @@ body{
     max-width:1000px;
     margin:20px auto 0;
 }
+
+.hero-center{
+    position:relative;
+}
+
+.hero-center::before{
+    content:'';
+
+    display:block;
+
+    width:90px;
+    height:4px;
+
+    margin:0 auto 20px;
+
+    background:#ff7b00;
+
+    border-radius:10px;
+}
 .hero-center p{
     font-size:1.05rem;
     line-height:1.8;
@@ -136,10 +186,15 @@ body{
 }
 
 .hero-verse{
-    margin-top:15px;
-    color:#ffd8a8;
+    margin-top:18px;
+
+    color:#ffb45c;
+
     font-style:italic;
-    font-size:.95rem;
+
+    font-size:1rem;
+
+    font-weight:500;
 }
 
 /* ================= CARD ================= */

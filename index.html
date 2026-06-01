@@ -91,56 +91,32 @@ body{
 
 /* ================= HEADER PRO ================= */
 
-.top-bar{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
-    margin-bottom:10px;
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
 }
 
-.logo-left img{
-    height:95px;
-    width:auto;
-    object-fit:contain;
+.center-brand {
+    text-align: center;
+    color: white;
+    margin-top: 0; /* Eliminamos el margen negativo */
 }
 
-.logo-right-container img{
-    height:55px;
-    width:auto;
-    object-fit:contain;
+.center-brand h1 {
+    font-size: clamp(1.2rem, 4vw, 2.5rem);
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: white;
+    text-shadow: 0 2px 10px rgba(0,0,0,.3);
 }
 
-.center-brand{
-    text-align:center;
-    color:white;
-    margin-top:-25px;
-}
-
-.center-brand h1{
-    font-size:clamp(3.5rem,6vw,6rem);
-
-    line-height:1;
-
-    font-weight:800;
-
-    margin-bottom:12px;
-
-    color:white;
-
-    text-shadow:
-        0 4px 20px rgba(0,0,0,.35);
-}
-
-.center-brand p{
-    font-size:1.15rem;
-
-    opacity:.95;
-
-    color:#dbeafe;
-
-    letter-spacing:2px;
-
-    text-transform:uppercase;
+.center-brand p {
+    font-size: 0.9rem;
+    color: #e2e8f0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 /* ================= HERO TEXT ================= */
@@ -385,29 +361,23 @@ footer{
 </head>
 <body>
 
-<section class="hero" style="background:linear-gradient(90deg,#0b3d91,#0a2d6d); border-radius:12px; padding:20px 0; position:relative;">
-  <div class="hero-content" style="display:flex; align-items:center; justify-content:space-between; width:min(1400px,95%); margin:auto;">
-    
-    <!-- Logo Izquierdo -->
-    <div class="logo-left">
-      <img src="logo1.png" alt="IPUC" style="height:100px; width:auto; object-fit:contain;">
+<section class="hero">
+    <div class="hero-content">
+        <div class="top-bar">
+            <div class="logo-left">
+                <img src="logo1.png" alt="IPUC">
+            </div>
+
+            <div class="center-brand">
+                <h1>IPUC Bochica Sur</h1>
+                <p>Iglesia Pentecostal Unida de Colombia</p>
+            </div>
+
+            <div class="logo-right-container">
+                <img src="logo2.png" alt="UNÁNIMES">
+            </div>
+        </div>
     </div>
-    
-    <!-- Título centrado -->
-    <div class="center-brand" style="text-align:center; flex:1; margin:0 20px;">
-      <h1 style="font-size:3rem; font-weight:800; color:white; margin-bottom:5px; text-shadow:0 4px 20px rgba(0,0,0,0.35);">
-        IPUC Bochica Sur
-      </h1>
-      <p style="font-size:1rem; color:#dbeafe; letter-spacing:1px; text-transform:uppercase; margin:0;">
-        Iglesia Pentecostal Unida de Colombia
-      </p>
-    </div>
-    
-    <!-- Logo Derecho -->
-    <div class="logo-right-container">
-      <img src="logo2.png" alt="UNIMES" style="height:70px; width:auto; object-fit:contain;">
-    </div>
-  </div>
 </section>
 
 <section class="main-card">

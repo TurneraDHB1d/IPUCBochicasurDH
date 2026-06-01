@@ -42,128 +42,50 @@ body{
 }
 
 /* ================= HERO ================= */
-
-.hero{
-    background:linear-gradient(135deg,#071f4f 0%,#0b3d91 45%,#0a2d6d 100%);
-    position:relative;
-    overflow:hidden;
-    padding:15px 0 30px;
-    border-bottom:4px solid #ff7b00;
+.hero {
+    background: #0b3d91;
+    padding: 20px 0;
+    border-bottom: 4px solid #ff7b00;
 }
 
-.hero::before{
-    content:'';
-    position:absolute;
-
-    inset:0;
-
-    background:
-    radial-gradient(
-        circle at top right,
-        rgba(255,123,0,.12),
-        transparent 35%
-    );
-
-    pointer-events:none;
-}
-
-.hero::after{
-    content:'';
-
-    position:absolute;
-
-    left:0;
-    right:0;
-    bottom:0;
-
-    height:1px;
-
-    background:
-    rgba(255,255,255,.15);
-}
-
-.hero-content{
-    width:min(1400px,95%);
-    margin:auto;
-    position:relative;
-    z-index:2;
-}
-
-/* ================= HEADER PRO ================= */
-
-.top-bar {
+.hero-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
+    gap: 20px;
+}
+
+.logo-left img, .logo-right-container img {
+    height: 80px;
+    width: auto;
 }
 
 .center-brand {
     text-align: center;
     color: white;
-    margin-top: 0; /* Eliminamos el margen negativo */
 }
 
 .center-brand h1 {
-    font-size: clamp(1.2rem, 4vw, 2.5rem);
-    font-weight: 700;
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-weight: 800;
     margin-bottom: 5px;
-    color: white;
-    text-shadow: 0 2px 10px rgba(0,0,0,.3);
 }
 
 .center-brand p {
     font-size: 0.9rem;
-    color: #e2e8f0;
-    letter-spacing: 1px;
     text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.9;
 }
 
-/* ================= HERO TEXT ================= */
-
-.hero-center{
-    text-align:center;
-    color:white;
-    max-width:1000px;
-    margin:20px auto 0;
+/* Ajuste para móviles */
+@media(max-width: 768px) {
+    .hero-container { flex-direction: column; text-align: center; }
+    .logo-left img, .logo-right-container img { height: 60px; }
 }
-
-.hero-center{
-    position:relative;
-}
-
-.hero-center::before{
-    content:'';
-
-    display:block;
-
-    width:90px;
-    height:4px;
-
-    margin:0 auto 20px;
-
-    background:#ff7b00;
-
-    border-radius:10px;
-}
-.hero-center p{
-    font-size:1.05rem;
-    line-height:1.8;
-    opacity:.95;
-}
-
-.hero-verse{
-    margin-top:18px;
-
-    color:#ffb45c;
-
-    font-style:italic;
-
-    font-size:1rem;
-
-    font-weight:500;
-}
-
 /* ================= CARD ================= */
 
 .main-card{
@@ -362,20 +284,18 @@ footer{
 <body>
 
 <section class="hero">
-    <div class="hero-content">
-        <div class="top-bar">
-            <div class="logo-left">
-                <img src="logo1.png" alt="IPUC">
-            </div>
+    <div class="hero-container">
+        <div class="logo-left">
+            <img src="logo1.png" alt="IPUC">
+        </div>
 
-            <div class="center-brand">
-                <h1>IPUC Bochica Sur</h1>
-                <p>Iglesia Pentecostal Unida de Colombia</p>
-            </div>
+        <div class="center-brand">
+            <h1>IPUC Bochica Sur</h1>
+            <p>Iglesia Pentecostal Unida de Colombia</p>
+        </div>
 
-            <div class="logo-right-container">
-                <img src="logo2.png" alt="UNÁNIMES">
-            </div>
+        <div class="logo-right-container">
+            <img src="logo2.png" alt="UNÁNIMES">
         </div>
     </div>
 </section>

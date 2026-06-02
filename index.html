@@ -394,92 +394,92 @@ footer{
 
 @media(max-width:768px){
 
-    
-
-.top-bar{
-    position:relative;
-    height:95px;
-    margin-bottom:0;
-}
-.logo-left{
-    position:absolute;
-    left:10px;
-    top:12px;
-    width:80px;
-    text-align:center;
-    padding:0;
-}
-
-.logo-left img{
-    height:70px;
-    width:auto;
-}
-
-.logo-right-container{
-    position:absolute;
-    left:0;
-    right:0;
-    top:125px;
-
-    display:flex;
-    justify-content:center;
-
-    padding:0;
-}
-
-.logo-right-container img{
-    height:42px;
-    width:auto;
-    object-fit:contain;
-}
-
-    .center-brand h1{
-        font-size:2.2rem;
-    }
-
-    .center-brand p{
-        font-size:.9rem;
-    }
-
-.hero{
-    padding:15px 0 15px;
-}
-
-    .main-card{
-        margin-top:-15px;
-        padding:30px 20px;
-    }
-
-.center-brand{
-    padding-top:18px;
-    padding-left:85px;
-    padding-right:10px;
-    text-align:center;
-}
-
-
 .hero{
     background:
     linear-gradient(
         90deg,
-        #ffffff 0%,
-        #ffffff 22%,
+        #0b3d91 0%,
+        #0b3d91 22%,
         #0b3d91 22%,
         #0b3d91 100%
     );
+
+    padding:15px 0 80px;
 }
 
 .hero::before{
-    left:22%;
+    display:none;
 }
 
 .hero::after{
     display:none;
 }
 
-.hero{
-    padding-bottom:95px;
+/* fila superior */
+.top-bar{
+    position:relative;
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    padding:10px 12px 0;
+    margin:0;
+    pointer-events:auto;
 }
+
+/* logo izquierdo */
+.logo-left{
+    position:static;
+    flex:0 0 70px;
+    padding:0;
+}
+
+.logo-left img{
+    height:65px;
+    width:auto;
+    display:block;
+}
+
+/* ocultamos logo2 de la fila */
+.logo-right-container{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:-65px;
+
+    display:flex;
+    justify-content:center;
+}
+
+.logo-right-container img{
+    height:40px;
+    width:auto;
+}
+
+/* título al lado del logo */
+.center-brand{
+    padding:0;
+    flex:1;
+    text-align:center;
+    color:white;
+}
+
+.center-brand h1{
+    font-size:1.8rem;
+    line-height:1.05;
+    margin-bottom:4px;
+}
+
+.center-brand p{
+    font-size:.8rem;
+    letter-spacing:1px;
+}
+
+.main-card{
+    margin-top:-15px;
+    padding:30px 20px;
+}
+
 }
 
 
@@ -497,15 +497,15 @@ footer{
         <img src="logo1.png" alt="IPUC">
     </div>
 
+    <div class="center-brand">
+        <h1>IPUC Bochica Sur</h1>
+        <p>Iglesia Pentecostal Unida de Colombia</p>
+    </div>
+
     <div class="logo-right-container">
         <img src="logo2.png" alt="UNÁNIMES">
     </div>
 
-</div>
-
-<div class="center-brand">
-    <h1>IPUC Bochica Sur</h1>
-    <p>Iglesia Pentecostal Unida de Colombia</p>
 </div>
 
    

@@ -404,7 +404,7 @@ footer{
         #0b3d91 100%
     );
 
-    padding:15px 0 95px;
+    padding:15px 0 70px;
 }
 
 .hero::before{
@@ -418,26 +418,22 @@ footer{
 /* fila superior */
 .top-bar{
     position:relative;
-
     display:flex;
-    align-items:flex-start;
+    align-items:center;
+    gap:12px;
 
-    min-height:80px;
-
-    padding:10px 10px 0 10px;
-
+    padding:10px 12px 0;
+    margin:0;
     pointer-events:auto;
+
+    min-height:90px;
 }
 
 /* logo izquierdo */
 .logo-left{
-    position:relative;
-
-    flex:0 0 75px;
-
+    position:static;
+    flex:0 0 70px;
     padding:0;
-
-    z-index:5;
 }
 
 .logo-left img{
@@ -452,12 +448,12 @@ footer{
 
     right:12px;
 
-    top:115px;
+    top:100%;
+
+    margin-top:15px;
 
     display:flex;
     justify-content:flex-end;
-
-    width:calc(100% - 24px);
 }
 .logo-right-container img{
     height:40px;
@@ -466,12 +462,9 @@ footer{
 
 /* título al lado del logo */
 .center-brand{
+    padding:0;
     flex:1;
-
-    padding:0 10px;
-
     text-align:center;
-
     color:white;
 }
 

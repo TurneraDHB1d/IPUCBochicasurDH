@@ -418,20 +418,25 @@ footer{
 /* fila superior */
 .top-bar{
     position:relative;
+
+    display:flex;
+    align-items:flex-start;
+
     min-height:80px;
 
-    padding-top:10px;
+    padding:10px 10px 0 10px;
 
     pointer-events:auto;
 }
 
 /* logo izquierdo */
 .logo-left{
-    position:absolute;
-    top:10px;
-    left:10px;
+    position:relative;
+
+    flex:0 0 75px;
 
     padding:0;
+
     z-index:5;
 }
 
@@ -461,11 +466,13 @@ footer{
 
 /* título al lado del logo */
 .center-brand{
-    padding:0 15px;
-    text-align:center;
-    color:white;
+    flex:1;
 
-    width:100%;
+    padding:0 10px;
+
+    text-align:center;
+
+    color:white;
 }
 
 .center-brand h1{

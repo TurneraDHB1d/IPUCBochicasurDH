@@ -394,23 +394,35 @@ footer{
 
 @media(max-width:768px){
 
-    .top-bar{
-        grid-template-columns:1fr;
-        text-align:center;
-        gap:15px;
-    }
+    
 
-    .logo-left,
-    .logo-right-container{
-        justify-content:center;
-    }
+.top-bar{
+    position:relative;
+    inset:auto;
 
-    .logo-left img{
-        height:70px;
-    }
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 
-  .logo-right-container img{
-    height:85px;
+    padding:0 15px;
+    margin-bottom:15px;
+
+    pointer-events:auto;
+}
+
+ .logo-left,
+.logo-right-container{
+    position:static;
+    justify-content:center;
+    padding:0;
+}
+
+ .logo-left img{
+    height:55px;
+}
+
+.logo-right-container img{
+    height:45px;
     width:auto;
     object-fit:contain;
 }
@@ -423,14 +435,18 @@ footer{
         font-size:.9rem;
     }
 
-  .hero{
-    padding:10px 0 10px;
+.hero{
+    padding:15px 0 15px;
 }
 
     .main-card{
         margin-top:-15px;
         padding:30px 20px;
     }
+
+    .center-brand{
+    padding-top:0;
+}
 }
 
 

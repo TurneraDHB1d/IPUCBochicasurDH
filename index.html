@@ -404,7 +404,7 @@ footer{
         #0b3d91 100%
     );
 
-    padding:15px 0 120px;
+    padding:15px 0 70px;
 }
 
 .hero::before{
@@ -425,6 +425,8 @@ footer{
     padding:10px 12px 0;
     margin:0;
     pointer-events:auto;
+
+    min-height:90px;
 }
 
 /* logo izquierdo */
@@ -443,9 +445,13 @@ footer{
 /* ocultamos logo2 de la fila */
 .logo-right-container{
     position:absolute;
+
     left:0;
     right:0;
-    bottom:-95px;
+
+    top:100%;
+
+    margin-top:15px;
 
     display:flex;
     justify-content:center;
